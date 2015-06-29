@@ -6,7 +6,7 @@
 import postcss from 'postcss';
 
 /**
- *
+ * Border style RegExp
  */
 
 const styleRegExp = /(hidden|dotted|dashed|solid|double|groove|ridge|inset|outset)/i;
@@ -23,6 +23,9 @@ export default postcss.plugin('postcss-border', () => {
 
 /**
  * Transform
+ *
+ * @param {Object} decl
+ * @api private
  */
 
 function transform(decl) {
