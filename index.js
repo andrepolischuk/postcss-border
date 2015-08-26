@@ -2,8 +2,8 @@ import postcss from 'postcss';
 const styleRegExp = /(hidden|dotted|dashed|solid|double|groove|ridge|inset|outset)/i;
 
 export default postcss.plugin('postcss-border', () => {
-  return (style) => {
-    style.eachDecl('border', transform);
+  return style => {
+    style.walkDecls('border', transform);
   };
 });
 
