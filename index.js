@@ -1,32 +1,11 @@
-
-/**
- * Module dependencies
- */
-
 import postcss from 'postcss';
-
-/**
- * Border style RegExp
- */
-
 const styleRegExp = /(hidden|dotted|dashed|solid|double|groove|ridge|inset|outset)/i;
-
-/**
- * Expose plugin
- */
 
 export default postcss.plugin('postcss-border', () => {
   return (style) => {
     style.eachDecl('border', transform);
   };
 });
-
-/**
- * Transform
- *
- * @param {Object} decl
- * @api private
- */
 
 function transform(decl) {
   const style = styleRegExp.exec(decl.value)[0];

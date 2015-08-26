@@ -1,6 +1,6 @@
 # postcss-border [![Build Status][travis-image]][travis-url]
 
-  > [PostCSS][postcss] plugin for border shortcut
+> [PostCSS][postcss] plugin for border shortcut
 
 ```css
 .hello {
@@ -29,7 +29,7 @@ postcss([require('postcss-border')]);
 
 ## License
 
-  MIT
+MIT
 
 [travis-url]: https://travis-ci.org/andrepolischuk/postcss-border
 [travis-image]: https://travis-ci.org/andrepolischuk/postcss-border.svg?branch=master
