@@ -24,7 +24,15 @@ npm install --save postcss-border
 ## Usage
 
 ```js
-postcss([require('postcss-border')]);
+var fs = require('fs');
+var postcss = require('postcss');
+var border = require('postcss-border');
+var css = fs.readFileSync('input.css', 'utf8');
+
+var output = postcss()
+  .use(border())
+  .process(css)
+  .css;
 ```
 
 ## License
