@@ -3,12 +3,14 @@
 > [PostCSS][postcss] plugin for border shortcut
 
 ```css
+/* before */
+
 .hello {
   border: 1px 0 solid #000;
 }
-```
 
-```css
+/* after */
+
 .hello {
   border: 1px solid #000;
   border-width: 1px 0;
@@ -18,7 +20,7 @@
 ## Install
 
 ```sh
-npm install --save postcss-border
+npm install --save-dev postcss-border
 ```
 
 ## Usage
@@ -29,8 +31,7 @@ var postcss = require('postcss');
 var border = require('postcss-border');
 var css = fs.readFileSync('input.css', 'utf8');
 
-var output = postcss()
-  .use(border())
+var output = postcss([border])
   .process(css)
   .css;
 ```
