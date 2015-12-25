@@ -25,6 +25,8 @@ npm install --save-dev postcss-border
 
 ## Usage
 
+### PostCSS
+
 ```js
 var fs = require('fs');
 var postcss = require('postcss');
@@ -34,6 +36,22 @@ var css = fs.readFileSync('input.css', 'utf8');
 var output = postcss([border])
   .process(css)
   .css;
+```
+
+### Gulp
+
+```js
+var gulp = require('gulp');
+var postcss = require('gulp-postcss');
+var border = require('postcss-border');
+
+gulp.task('css', function () {
+  return gulp.src('./src')
+    .pipe(postcss([
+      border
+    ]))
+    .pipe(gulp.dest('./dist'));
+});
 ```
 
 ## License
