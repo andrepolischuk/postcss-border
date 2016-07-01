@@ -10,7 +10,7 @@
   ],
   "repository": "andrepolischuk/postcss-border",
   "dependencies": {
-    "postcss": "^5.0.2"
+    "postcss": "^5.0.21"
   },
   "devDependencies": {
     "ava": "^0.15.2",
