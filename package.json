@@ -8,6 +8,9 @@
     "index.js",
     "index.es5.js"
   ],
+  "engines": {
+    "node": ">=0.12"
+  },
   "scripts": {
     "test": "ava --require babel-register",
     "prepublish": "babel index.js --out-file index.es5.js",
